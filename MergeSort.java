@@ -2,15 +2,8 @@ package Array;
 import java.util.Arrays;
 public class MergeSort {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//int []a= {11,22,33,44};
-		//int []b= {12,24,36,48,60};
-		 //int[] a2 = {2,4,6,8,10,3,5,7,9,11};
+	
 	   int []pass= {10,20,30,40,50,1,9,10,30,50};
-		//int []ans =mergeSort(a,b);
-		//System.out.println(mergeSort(a, b));
-		//System.out.println(Arrays.toString(a,b));
-		//System.out.println(Arrays.toString(ans));
 		
 		int []ans =OneArraymergeSort(pass);
 		System.out.println(Arrays.toString(ans));
@@ -55,11 +48,9 @@ public class MergeSort {
 	    int[] ans = new int[a.length];
 	    int mid = a.length / 2;
 
-	    int i = 0;        // pointer for first half
-	    int j = mid;      // pointer for second half
-	    int k = 0;        // pointer for ans array
-
-	    // Merge until one half is exhausted
+	    int i = 0;        
+	    int j = mid;     
+	    int k = 0;        
 	    while (i < mid && j < a.length) {
 	        if (a[i] <= a[j]) {
 	            ans[k++] = a[i++];
@@ -68,12 +59,12 @@ public class MergeSort {
 	        }
 	    }
 
-	    // Copy remaining elements from first half
+	    
 	    while (i < mid) {
 	        ans[k++] = a[i++];
 	    }
 
-	    // Copy remaining elements from second half
+	    
 	    while (j < a.length) {
 	        ans[k++] = a[j++];
 	    }
@@ -82,3 +73,4 @@ public class MergeSort {
 	}
 
 }
+
